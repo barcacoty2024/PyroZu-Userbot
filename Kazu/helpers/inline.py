@@ -23,7 +23,7 @@ def paginate_help(page_number, loaded_modules, prefix):
     modules = [
         InlineKeyboardButton(
             text="{}".format(x),
-            callback_data=f"ub_modul_{x}",
+            callback_data=f"ub_modul_{x}52",
         )
         for x in helpable_modules
     ]
@@ -86,7 +86,7 @@ def inline_wrapper(func):
                         InlineQueryResultArticle(
                             title="Maaf, Kamu Harus Menjadi Pengguna Sudo Untuk Memakai Saya!",
                             input_message_content=InputTextMessageContent(
-                                "Atau Kamu Bisa Membuatnya Sendiri Di @kazusupportgrp"
+                                "Atau Kamu Bisa Membuatnya Sendiri Di @Disney_storeDan"
                             ),
                         )
                     )
