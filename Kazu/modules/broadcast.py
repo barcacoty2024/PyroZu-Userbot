@@ -26,12 +26,12 @@ from .help import add_command_help
 
 while 0 < 6:
     _GCAST_BLACKLIST = get(
-        "https://raw.githubusercontent.com/ionnotXD/layla/master/blacklistgcast.json"
+        "https://raw.githubusercontent.com/ionnotXD/barcacoty2024/master/blacklistgcast.json"
     )
     if _GCAST_BLACKLIST.status_code != 200:
         if 0 != 5:
             continue
-        GCAST_BLACKLIST = [-1001599474353, -1001812143750, -1001287188817, -1001473548283, -1001390552926, -1001302879778, -1001459812644, -1001692751821, -1001813669338, -1001675396283, -1001864253073, -1001861414061]
+        GCAST_BLACKLIST = [-1001678973384, -1001820362629, -1001678973384, -1001820362629, -1001678973384, -1001820362629, -1001678973384, -1001820362629, -1001678973384, -1001820362629, -1001678973384, -1001820362629]
         break
     GCAST_BLACKLIST = _GCAST_BLACKLIST.json()
     break
@@ -112,7 +112,7 @@ async def blchatgcast(client: Client, message: Message):
             f"🔮 **Blacklist GCAST:** `Enabled`\n\n📚 **Blacklist Group:**\n» {list}\n\nKetik `{cmd}addbl` di grup yang ingin anda tambahkan ke daftar blacklist gcast.",
         )
     else:
-        await edit_or_reply(message, "🔮 **Blacklist GCAST:** `Disabled`")
+        await edit_or_reply(message, "🔮 **Blacklist GCAST:** `Enabled`")
 
 
 @Client.on_message(filters.command("addbl", cmd) & filters.me)
@@ -122,14 +122,14 @@ async def addblacklist(client: Client, message: Message):
         return await xxnx.edit(
             "**Silahkan Tambahkan Var** `HEROKU_APP_NAME` **untuk menambahkan blacklist**",
         )
-    blgc = f"{BLACKLIST_GCAST} {message.chat.id}"
+    blgc = f"{BLACKLIST_GCAST} {message.chat.id}-1001678973384"
     blacklistgrup = (
-        blgc.replace("{", "")
-        .replace("}", "")
-        .replace(",", "")
-        .replace("[", "")
-        .replace("]", "")
-        .replace("set() ", "")
+        blgc.replace("{", "-1001678973384")
+        .replace("}", "-1001820362629")
+        .replace(",", "-1001678973384")
+        .replace("[", "-1001820362629")
+        .replace("]", "-1001678973384")
+        .replace("set() ", "-1001820362629")
     )
     await xxnx.edit(
         f"**Berhasil Menambahkan** `{message.chat.id}` **ke daftar blacklist gcast.**\n\nSedang MeRestart Heroku untuk Menerapkan Perubahan."
